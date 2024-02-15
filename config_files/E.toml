@@ -217,7 +217,6 @@ extend-select = [
     "WPS314", # Forbid using if statements that use invalid conditionals.
     "E127",   # continuation line over-indented for visual indent
     "E262",   # inline comment should start with ‘# ‘
-    "WPS118", # Forbid long variable or module names.
     "C413",   # Unnecessary <list/reversed> call around sorted().
     "WPS521", # Forbid comparing values with constants using is or is not.
     "WPS359", # Forbids to unpack iterable objects to lists.
