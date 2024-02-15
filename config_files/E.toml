@@ -1,0 +1,244 @@
+config-file = "D.toml"
+
+[pylint]
+enable = [
+    "missing-module-docstring",
+    "missing-function-docstring",
+    "missing-return-type",
+    "missing-parameter-type",
+    "long-function",
+    "missing-class-docstring",
+    "missing-attribute-type",
+    "use-implicit-booleaness-not-comparison",
+    "too-many-branches",
+    "too-many-statements",
+    "too-many-arguments",
+    "too-many-return-statements",
+    "shadowing-in-comprehension",
+    "fixme",
+    "use-isdecimal",
+    "too-many-locals",
+    "simplifiable-if-statement",
+    "chained-comparison",
+    "useless-return",
+    "consider-using-dict-items",
+    "too-many-boolean-expressions",
+    "too-many-nested-blocks",
+    "import-outside-toplevel",
+    "use-dict-literal",
+    "consider-using-generator",
+    "consider-using-f-string",
+    "pointless-string-statement",
+    "simplifiable-if-expression",
+    "line-too-long",
+    "consider-iterating-dictionary",
+    "syntax-error",
+    "bad-indentation",
+    "useless-else-on-loop",
+    "too-many-instance-attributes",
+    "consider-swap-variables",
+    "self-assigning-variable",
+    "self-cls-assignment",
+    "use-a-generator",
+    "eval-used",
+    "cell-var-from-loop",
+    "unnecessary-dict-index-lookup",
+    "too-many-public-methods",
+    "comparison-with-itself",
+    "simplifiable-if-assignment-conj",
+    "consider-using-ternary",
+    "unpacking-non-sequence",
+    "unused-private-member",
+    "trailing-comma-tuple",
+    "broad-except",
+    "implicit-str-concat",
+    "too-many-lines",
+    "consider-using-sys-exit",
+    "non-ascii-name",
+    "simplifiable-if-expr-conj",
+    "using-constant-test",
+    "disallowed-name",
+    "global-statement",
+    "ungrouped-imports",
+    "use-sequence-for-iteration",
+    "unsupported-binary-operation",
+]
+
+[flake8]
+extend-select = [
+    "R504",   # unnecessary variable assignment before return statement.
+    "WPS503", # Forbid useless else cases in returning functions.
+    "A001",   # variable "%s" is shadowing a python builtin
+    "WPS441", # Forbid control variables after the block body.
+    "R503",   # missing explicit return at the end of function able to return non-None value.
+    "WPS508", # Forbid not with compare expressions.
+    "WPS349", # Forbid redundant components in a subscript's slice.
+    "R501",   # do not explicitly return None in function if it is the only possible return value.
+    "WPS529", # Forbid implicit .get() dict method.
+    "WPS444", # Forbid explicit falsely-evaluated conditions with several keywords.
+    "WPS408", # Forbid using the same logical conditions in one expression.
+    "A002",   # argument "%s" is shadowing a python builtin
+    "E231",   # missing whitespace after ‘,’, ‘;’, or ‘:’
+    "WPS327", # Forbid meaningless continue in loops.
+    "WPS409", # Forbid heterogeneous operators in one comparison.
+    "C405",   # Unnecessary <list/tuple> literal - rewrite as a set literal.
+    "F841",   # local variable name is assigned to but never used
+    "E225",   # missing whitespace around operator
+    "C414",   # Unnecessary <list/reversed/set/sorted/tuple> call within <list/set/sorted/tuple>().
+    "WPS121", # Forbid using variables that are marked as unused.
+    "E211",   # whitespace before ‘(’
+    "E117",   # over-indented
+    "E203",   # whitespace before ‘:’
+    "F821",   # undefined name name
+    "E111",   # indentation is not a multiple of four
+    "E112",   # expected an indented block
+    "E741",   # do not use variables named ‘l’, ‘O’, or ‘I’
+    "E228",   # missing whitespace around modulo operator
+    "E221",   # multiple spaces before operator
+    "E202",   # whitespace before ‘)’
+    "WPS308", # Forbid comparing between two literals.
+    "E271",   # multiple spaces after keyword
+    "WPS351", # Forbid unnecessary literals in your code.
+    "E222",   # multiple spaces after operator
+    "E115",   # expected an indented block (comment)
+    "E125",   # continuation line with same indent as next logical line
+    "E201",   # whitespace after ‘(’
+    "E701",   # multiple statements on one line (colon)
+    "E101",   # indentation contains mixed spaces and tabs
+    "E114",   # indentation is not a multiple of four (comment)
+    "E113",   # unexpected indentation
+    "E116",   # unexpected indentation (comment)
+    "E272",   # multiple spaces before keyword
+
+    "WPS221", # Forbid complex lines.
+    "WPS318", # Forbid extra indentation.
+    "WPS319", # Forbid brackets in the wrong position.
+    "WPS317", # Forbid incorrect indentation for parameters.
+    "WPS231", # Forbid functions with too much cognitive complexity.
+    "I201",   # Missing newline between import groups.
+    "I101",   # The names in your from import are in the wrong order.
+    "WPS306", # Forbid writing classes without base classes.
+    "WPS520", # Forbid comparing with explicit falsy constants.
+    "WPS337", # Forbid multiline conditions.
+    "B007",   # Loop control variable not used within the loop body. If this is intended, start the name with an underscore.
+    "WPS232", # Forbid modules with average cognitive complexity that is too high.
+    "WPS519", # Forbid implicit sum() calls.
+    "WPS213", # Forbid putting too many expressions in a single function.
+    "E800",   # Found commented out code
+    "WPS420", # Forbid some python keywords.
+    "WPS425", # Forbid booleans as non-keyword parameters.
+    "WPS220", # Forbid nesting blocks too deep.
+    "WPS212", # Forbid placing too many return statements in a function.
+    "WPS514", # Forbid multiple equality comparisons with the same variable.
+    "WPS211", # Forbid too many arguments for a function or method.
+    "WPS335", # Forbid wrong for loop iter targets.
+    "C812",   # missing trailing comma
+    "WPS214", # Forbid too many methods in a single class.
+    "WPS352", # Forbid multiline loops.
+    "A003",   # class attribute "%s" is shadowing a python builtin
+    "WPS234", # Forbid overly complex annotations.
+    "WPS222", # Forbid conditions with too many logical operators.
+    "WPS313", # Enforce separation of parenthesis from keywords with spaces.
+    "N806",   # variable in function should be lowercase
+    "WPS112", # Forbid private name pattern.
+    "WPS219", # Forbid consecutive expressions with too deep access level.
+    "WPS333", # Forbid implicit complex comparison expressions.
+    "W293",   # blank line contains whitespace
+    "WPS515", # Forbid open() without a context manager.
+    "WPS528", # Forbid implicit .items() iterator.
+    "WPS237", # Forbids f strings that are too complex.
+    "W292",   # no newline at end of file
+    "WPS324", # Enforce consistent return statements.
+    "E302",   # expected 2 blank lines, found 0
+    "WPS510", # Forbid in with static containers except set nodes.
+    "E303",   # too many blank lines (3)
+    "WPS223", # Forbid too many elif branches.
+    "WPS459", # Forbids comparisons with float and complex.
+    "WPS435", # Forbid multiplying lists.
+    "WPS309", # Forbid comparisons where the argument doesn't come first.
+    "E501",   # line too long (82 > 79 characters)
+    "WPS236", # Forbid using too many variables to unpack a tuple.
+    "WPS342", # Forbid \\ escape sequences inside regular strings.
+    "WPS120", # Forbid trailing _ for names that do not need it.
+    "B011",   # Do not call assert False since python -O removes these calls. Instead callers should raise AssertionError().
+    "WPS433", # Forbid imports nested in functions.
+    "WPS320", # Forbid multi-line function type annotations.
+    "WPS509", # Forbid nesting ternary expressions in certain places.
+    "WPS316", # Forbid multiple assignment targets for context managers.
+    "WPS230", # Forbid instances with too many public attributes.
+    "F401",   # module imported but unused
+    "WPS334", # Forbid reversed order complex comparison expressions.
+    "WPS361", # Forbids inconsistent newlines in comprehensions.
+    "WPS502", # Forbid simplifiable if conditions.
+    "N802",   # function name should be lowercase
+    "W291",   # trailing whitespace
+    "WPS429", # Forbid multiple assignments on the same line.
+    "P101",   # format string does contain unindexed parameters
+    "WPS615", # Forbids to use getters and setters in objects.
+    "WPS460", # Forbids to have single element destructuring.
+    "WPS338", # Forbid incorrect order of methods inside a class.
+    "C819",   # trailing comma prohibited
+    "E265",   # block comment should start with ‘# ‘
+    "WPS523", # Forbid unpythonic variable swaps.
+    "WPS122", # Forbid explicit unused variables.
+    "WPS457", # Forbids use of infinite while True: loops.
+    "E305",   # expected 2 blank lines after end of function or class
+    "N803",   # argument name should be lowercase
+    "WPS464", # Forbid empty comments.
+    "WPS348", # Forbid starting lines with a dot.
+    "E999",   # Syntax error
+    "WPS426", # Forbid lambda inside loops.
+    "WPS362", # Forbid assignment to a subscript slice.
+    "WPS430", # Forbid nested functions.
+    "R502",   # do not implicitly return None in function able to return non-None value.
+    "WPS346", # Forbid double minus operations.
+    "WPS229", # Forbid try blocks with bodies that are too long.
+    "WPS117", # Forbid naming variables self, cls, or mcs.
+    "B015",   # Pointless comparison. This comparison does nothing but waste CPU instructions. Either prepend assert or remove it.
+    "E301",   # expected 1 blank line, found 0
+    "WPS447", # Forbid using the alphabet as a string.
+    "WPS437", # Forbid protected attributes and methods.
+    "WPS465", # Forbid comparisons between bitwise and boolean expressions.
+    "E261",   # at least two spaces before inline comment
+    "I202",   # Additional newline in a group of imports.
+    "WPS524", # Forbid misrefactored self assignment.
+    "WPS115", # Require snake_case for naming class attributes.
+    "WPS360", # Forbid the use of raw strings when there is no backslash in the string.
+    "C815",   # missing trailing comma in Python 3.5+
+    "W391",   # blank line at end of file
+    "C401",   # Unnecessary generator - rewrite as a set comprehension.
+    "WPS458", # Forbids to import from already imported modules.
+    "N816",   # mixedCase variable in global scope
+    "WPS116", # Forbid using more than one consecutive underscore in variable names.
+    "E128",   # continuation line under-indented for visual indent
+    "P103",   # other string does contain unindexed parameters
+    "E711",   # comparison to None should be ‘if cond is None:’
+    "WPS228", # Forbid compare expressions that are too long.
+    "WPS314", # Forbid using if statements that use invalid conditionals.
+    "E127",   # continuation line over-indented for visual indent
+    "E262",   # inline comment should start with ‘# ‘
+    "WPS118", # Forbid long variable or module names.
+    "C413",   # Unnecessary <list/reversed> call around sorted().
+    "WPS521", # Forbid comparing values with constants using is or is not.
+    "WPS359", # Forbids to unpack iterable objects to lists.
+    "WPS355", # Forbid useless blank lines before and after brackets.
+    "WPS322", # Forbid triple quotes for singleline strings.
+    "WPS200", # Forbid modules with complex lines.
+    "WPS235", # Found too many imported names from a module: _
+    "C818",   # trailing comma on bare tuple prohibited
+    "E502",   # the backslash is redundant between brackets
+    "WPS601", # Forbid shadowing class level attributes with instance level attributes.
+    "W191",   # indentation contains tabs
+    "WPS356", # Forbid unnecessary iterable unpacking.
+    "WPS339", # Forbid meaningless zeros.
+    "WPS347", # Forbid imports that may cause confusion outside of the module.
+    "C409",   # Unnecessary <list/tuple> passed to tuple() - <advice>.
+    "N801",   # class names should use CapWords convention
+    "WPS525", # Forbid comparisons where in is compared with single item container.
+    "WPS123", # Forbid unused variables with multiple underscores.
+    "N805",   # first argument of a method should be named ‘self’
+    "WPS526", # Forbid yield inside for loop instead of yield from.
+    "E266",   # too many leading ‘#’ for block comment
+    "C406",   # Unnecessary <list/tuple> literal - rewrite as a dict literal.
+    "C400",   # Unnecessary generator - rewrite as a list comprehension.
+]

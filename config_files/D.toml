@@ -1,0 +1,80 @@
+config-file = "C.toml"
+
+[pylint]
+enable = [
+    "use-enumerate",
+    "use-augmented-assign",
+    "unspecified-encoding",
+    "superfluous-parens",
+    "simplifiable-if-nested",
+    "simplifiable-if-seq",
+    "simplifiable-if-return-conj",
+    "invalid-name",
+    "consider-using-with",
+    "consider-using-in",
+    "no-else-break",
+    "no-repeated-op",
+    "use-append",
+    "unnecessary-pass",
+    "consider-using-set-comprehension",
+    "use-integral-division",
+    "consider-using-max-builtin",
+    "use-list-literal",
+    "unnecessary-list-index-lookup",
+    "unneeded-not",
+    "consider-using-min-builtin",
+    "use-implicit-booleaness-not-len",
+    "unnecessary-dunder-call",
+    "consider-using-join",
+    "unidiomatic-typecheck",
+    "unnecessary-lambda",
+    "use-tighter-boundaries",
+    "literal-comparison",
+]
+
+[flake8]
+extend-select = [
+    "R504",   # unnecessary variable assignment before return statement.
+    "WPS503", # Forbid useless else cases in returning functions.
+    "A001",   # variable "%s" is shadowing a python builtin
+    "WPS441", # Forbid control variables after the block body.
+    "R503",   # missing explicit return at the end of function able to return non-None value.
+    "WPS508", # Forbid not with compare expressions.
+    "WPS349", # Forbid redundant components in a subscript's slice.
+    "R501",   # do not explicitly return None in function if it is the only possible return value.
+    "WPS529", # Forbid implicit .get() dict method.
+    "WPS444", # Forbid explicit falsely-evaluated conditions with several keywords.
+    "WPS408", # Forbid using the same logical conditions in one expression.
+    "A002",   # argument "%s" is shadowing a python builtin
+    "E231",   # missing whitespace after ‘,’, ‘;’, or ‘:’
+    "WPS327", # Forbid meaningless continue in loops.
+    "WPS409", # Forbid heterogeneous operators in one comparison.
+    "C405",   # Unnecessary <list/tuple> literal - rewrite as a set literal.
+    "F841",   # local variable name is assigned to but never used
+    "E225",   # missing whitespace around operator
+    "C414",   # Unnecessary <list/reversed/set/sorted/tuple> call within <list/set/sorted/tuple>().
+    "WPS121", # Forbid using variables that are marked as unused.
+    "E211",   # whitespace before ‘(’
+    "E117",   # over-indented
+    "E203",   # whitespace before ‘:’
+    "F821",   # undefined name name
+    "E111",   # indentation is not a multiple of four
+    "E112",   # expected an indented block
+    "E741",   # do not use variables named ‘l’, ‘O’, or ‘I’
+    "E228",   # missing whitespace around modulo operator
+    "E221",   # multiple spaces before operator
+    "E202",   # whitespace before ‘)’
+    "WPS308", # Forbid comparing between two literals.
+    "E271",   # multiple spaces after keyword
+    "WPS351", # Forbid unnecessary literals in your code.
+    "E222",   # multiple spaces after operator
+    "E115",   # expected an indented block (comment)
+    "E125",   # continuation line with same indent as next logical line
+    "E201",   # whitespace after ‘(’
+    "E701",   # multiple statements on one line (colon)
+    "E101",   # indentation contains mixed spaces and tabs
+    "E114",   # indentation is not a multiple of four (comment)
+    "E113",   # unexpected indentation
+    "E116",   # unexpected indentation (comment)
+    "E272",   # multiple spaces before keyword
+]

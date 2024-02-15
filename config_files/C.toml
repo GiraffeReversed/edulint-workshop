@@ -1,0 +1,73 @@
+[pylint]
+load-plugins = [
+    "edulint.linting.checkers.short_problems",
+    "edulint.linting.checkers.improper_loop",
+    "edulint.linting.checkers.simplifiable_if",
+    "edulint.linting.checkers.type_annotation_checker",
+    "edulint.linting.checkers.basic_checker",
+    "edulint.linting.checkers.duplication_checker",
+    "edulint.linting.checkers.python_ta_checkers",
+]
+enable = [
+    "duplicate-blocks",
+    "unused-variable",
+    "duplicate-seq-ifs",
+    "use-foreach",
+    "simplifiable-if-return",
+    "use-for-loop",
+    "duplicate-if-branches",
+    "redefined-outer-name",
+    "no-name-in-module",
+    "no-is-bool",
+    "redundant-elif",
+    "no-else-continue",
+    "redundant-arithmetic",
+    "unnecessary-comprehension",
+    "assignment-from-no-return",
+    "unreachable",
+    "duplicate-value",
+    "use-literal-letter",
+    "unsubscriptable-object",
+    "use-ord-letter",
+    "simplifiable-if-expr",
+    "simplifiable-if-pass",
+    "modifying-iterated-structure",
+    "no-loop-else",
+    "undefined-loop-variable",
+    "expression-not-assigned",
+    "redefined-argument-from-local",
+    "pointless-statement",
+    "no-while-true",
+    "no-member",
+    "simplifiable-if-assignment",
+    "attribute-defined-outside-init",
+    "loop-shadows-control-variable",
+    "invalid-range-index",
+    "changing-control-variable",
+    "dangerous-default-value",
+    "duplicate-sequence",
+    "comparison-of-constants",
+    "remove-for",
+    "global-variable-undefined",
+    "no-global-vars",
+    "no-value-in-one-branch-return",
+    "simplifiable-condition",
+    "condition-evals-to-constant",
+    "no-value-for-parameter",
+    "unreachable-else",
+    "no-self-argument",
+]
+
+[flake8]
+select = [
+    "WPS326", # Forbid implicit string concatenation.
+    "WPS414", # Forbid tuple unpacking with side-effects.
+    "E712",   # comparison to True should be ‘if cond is True:’ or ‘if cond:’
+    "C416",   # Unnecessary <dict/list/set> comprehension - rewrite using <dict/list/set>().
+    "WPS330", # Forbid unnecessary operators in your code.
+    "WPS328", # Forbid meaningless nodes.
+    "WPS434", # Forbid assigning a variable to itself.
+    "WPS463", # Forbids to have functions starting with get_ without returning a value.
+    "WPS119", # Forbid unicode names.
+    "WPS312", # Forbid comparisons of a variable to itself.
+]

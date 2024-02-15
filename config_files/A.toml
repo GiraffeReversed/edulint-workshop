@@ -1,0 +1,48 @@
+[flake8]
+select = [
+    "W293", # blank line contains whitespace
+    "W292", # no newline at end of file
+    "E302", # expected 2 blank lines, found 0
+    "E303", # too many blank lines (3)
+    "E501", # line too long (82 > 79 characters)
+    "F401", # module imported but unused
+    "W291", # trailing whitespace
+    "E231", # missing whitespace after ‘,’, ‘;’, or ‘:’
+    "F841", # local variable name is assigned to but never used
+    "E225", # missing whitespace around operator
+    "E265", # block comment should start with ‘# ‘
+    "E305", # expected 2 blank lines after end of function or class
+    "E211", # whitespace before ‘(’
+    "E999", # Syntax error
+    "E117", # over-indented
+    "E203", # whitespace before ‘:’
+    "F821", # undefined name name
+    "E301", # expected 1 blank line, found 0
+    "E111", # indentation is not a multiple of four
+    "E112", # expected an indented block
+    "E741", # do not use variables named ‘l’, ‘O’, or ‘I’
+    "E261", # at least two spaces before inline comment
+    "E712", # comparison to True should be ‘if cond is True:’ or ‘if cond:’
+    "E228", # missing whitespace around modulo operator
+    "W391", # blank line at end of file
+    "E128", # continuation line under-indented for visual indent
+    "E221", # multiple spaces before operator
+    "E202", # whitespace before ‘)’
+    "E271", # multiple spaces after keyword
+    "E711", # comparison to None should be ‘if cond is None:’
+    "E222", # multiple spaces after operator
+    "E127", # continuation line over-indented for visual indent
+    "E262", # inline comment should start with ‘# ‘
+    "E115", # expected an indented block (comment)
+    "E125", # continuation line with same indent as next logical line
+    "E502", # the backslash is redundant between brackets
+    "E201", # whitespace after ‘(’
+    "W191", # indentation contains tabs
+    "E701", # multiple statements on one line (colon)
+    "E101", # indentation contains mixed spaces and tabs
+    "E114", # indentation is not a multiple of four (comment)
+    "E113", # unexpected indentation
+    "E116", # unexpected indentation (comment)
+    "E266", # too many leading ‘#’ for block comment
+    "E272", # multiple spaces before keyword
+]
